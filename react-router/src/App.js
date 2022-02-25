@@ -2,7 +2,6 @@ import { Route, Link, useRouteMatch, useParams} from 'react-router-dom'
 
 const Project=(props)=>{
     const match= useRouteMatch()
-    const params=useParams()
     const {project_id} = match.params
     return(
         <div>
@@ -13,7 +12,6 @@ const Project=(props)=>{
 }
 const Portfolio=()=>{
     const match=useRouteMatch()
-    console.log({match})
     return(
         <div>
            <h1>PORTFOLIO</h1> 
