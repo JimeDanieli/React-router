@@ -2,9 +2,11 @@ import { Route, Link, useRouteMatch} from 'react-router-dom'
 
 const Project=(props)=>{
     const match= useRouteMatch()
+    const params=useParams()
+    const {project_id} = match.params
     return(
         <div>
-          <h2>Project ...</h2>  
+          <h2>Project {project_id} </h2>  
         </div>
         
     )
