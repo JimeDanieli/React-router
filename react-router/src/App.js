@@ -1,4 +1,4 @@
-import { Route, Link, useRouteMatch} from 'react-router-dom'
+import { Route, Link, useRouteMatch, useParams} from 'react-router-dom'
 
 const Project=(props)=>{
     const match= useRouteMatch()
@@ -12,19 +12,22 @@ const Project=(props)=>{
     )
 }
 const Portfolio=()=>{
+    const match=useRouteMatch()
+    console.log({match})
     return(
         <div>
            <h1>PORTFOLIO</h1> 
            <ul>
                <li>
-                   <Link to={'/portfolio/project-1'} >Project 1</Link>
+                   <Link to={`${match.url}/project-1`} >Project 1</Link>
+                   {/* <Link to={'/portfolio/project-1'} >Project 1</Link> en el caso de que esto cambie, usamos el de arriba */}
                </li>
                <li>
-                   <Link to={'/portfolio/project-2'} >Project 2</Link>
+                   <Link to={`${match.url}/project-2`} >Project 2</Link>
                </li>
            </ul>
            <div>
-               <Route path={'portfolio/:project_id'} >
+               <Route path={`${match.path}/:project_id`} >
                    <Project/>
                </Route>
            </div>
