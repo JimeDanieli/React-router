@@ -1,5 +1,12 @@
-import { Route, Link} from 'react-router-dom'
+import { Route, Link, Redirect} from 'react-router-dom'
 
+const Portfolio=()=>{
+    const loggedIn= false
+
+    if(!loggedIn){
+        return <Redirect to='/'/>
+    }
+}
 function App() {
   return (
     <div className="App">
@@ -15,7 +22,7 @@ function App() {
       </nav>
       <section>
          <Route exact path='portfolio'>
-           <h1>PORTFOLIO</h1>
+           <Portfolio/>
          </Route>
          <Route exact path='/'>
             <h1>HOME</h1>
