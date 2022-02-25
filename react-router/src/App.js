@@ -16,21 +16,22 @@ function App() {
             <Link to='/'>HOME</Link>
           </li>
           <li>
-            <Link to='profile'>PROFILE</Link>
+            <Link to='/profile'>PROFILE</Link>
           </li>
           <li>
-            <Link to='portfolio'>PORTFOLIO</Link>
+            <Link to='/portfolio'>PORTFOLIO</Link>
           </li>
         </ul>
       </nav>
       <section>
-        <Route exact path='/'>
+          <Redirect exact from='/' to='/home'/>
+        <Route exact path='/home'>
             <h1>HOME</h1>
         </Route>
         <Route exact path='/profile'>
             <h1>PROFILE</h1>
         </Route>
-        <Route exact path='portfolio'>
+        <Route exact path='/portfolio'>
            <Portfolio/>
         </Route>
       </section>
