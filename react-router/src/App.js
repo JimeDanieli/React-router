@@ -27,6 +27,7 @@ const Portfolio=()=>{
                </li>
            </ul>
            <div>
+               {/* <Route path={'portfolio/:project_id'} > esto se modifica por modificar lo de arriba */} 
                <Route path={`${match.path}/:project_id`} >
                    <Project/>
                </Route>
