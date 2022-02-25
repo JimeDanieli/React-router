@@ -1,4 +1,4 @@
-import { Route, Link, useRouteMatch, useParams} from 'react-router-dom'
+import { Route, NavLink, useRouteMatch, useParams} from 'react-router-dom'
 
 const Project=(props)=>{
     const match= useRouteMatch()
@@ -17,11 +17,11 @@ const Portfolio=()=>{
            <h1>PORTFOLIO</h1> 
            <ul>
                <li>
-                   <Link to={`${match.url}/project-1`} >Project 1</Link>
+                   <NavLink exact to={`${match.url}/project-1`} >Project 1</NavLink>
                    {/* <Link to={'/portfolio/project-1'} >Project 1</Link> en el caso de que esto cambie, usamos el de arriba */}
                </li>
                <li>
-                   <Link to={`${match.url}/project-2`} >Project 2</Link>
+                   <NavLink exact to={`${match.url}/project-2`} >Project 2</NavLink>
                </li>
            </ul>
            <div>
@@ -40,10 +40,10 @@ function App() {
       <nav>
         <ul>
           <li>
-            <Link to='/'>HOME</Link>
+            <NavLink to='/'>HOME</NavLink>
           </li>
           <li>
-            <Link to='portfolio'>PORTFOLIO</Link>
+            <NavLink to='portfolio'>PORTFOLIO</NavLink>
           </li>
         </ul>
       </nav>
