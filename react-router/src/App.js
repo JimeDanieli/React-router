@@ -17,7 +17,7 @@ const Portfolio=()=>{
            <h1>PORTFOLIO</h1> 
            <ul>
                <li>
-                   <NavLink exact to={`${match.url}/project-1`} >Project 1</NavLink>
+                   <NavLink activeClassName='active' exact to={`${match.url}/project-1`} >Project 1</NavLink>
                    {/* <Link to={'/portfolio/project-1'} >Project 1</Link> en el caso de que esto cambie, usamos el de arriba */}
                </li>
                <li>
