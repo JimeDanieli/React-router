@@ -40,10 +40,13 @@ function App() {
       <nav>
         <ul>
           <li>
-            <NavLink to='/'>HOME</NavLink>
+            <NavLink exact to='/'>HOME</NavLink>
           </li>
           <li>
-            <NavLink to='portfolio'>PORTFOLIO</NavLink>
+            <NavLink isActive={(match, location) =>{
+                console.log(match, location)
+                return false
+            }} exact to='portfolio'>PORTFOLIO</NavLink>
           </li>
         </ul>
       </nav>
