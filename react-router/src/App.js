@@ -8,7 +8,18 @@ const Portfolio=()=>{
                <li>
                    <Link to={'/portfolio/project-1'} >Project 1</Link>
                </li>
+               <li>
+                   <Link to={'/portfolio/project-2'} >Project 2</Link>
+               </li>
            </ul>
+           <div>
+               <Route path={'portfolio/project-1'} >
+                   <h2>Project 1</h2>
+               </Route>
+               <Route path={'portfolio/project-2'} >
+                   <h2>Project 2</h2>
+               </Route>
+           </div>
         </div>
         
     )
