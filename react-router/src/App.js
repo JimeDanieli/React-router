@@ -1,12 +1,6 @@
-import { Route, Link, Redirect} from 'react-router-dom'
+import { Route, Link} from 'react-router-dom'
 
-const Portfolio=()=>{
-    const loggedIn= false
 
-    if(!loggedIn){
-        return <Redirect to='/'/>
-    }
-}
 function App() {
   return (
     <div className="App">
@@ -18,21 +12,17 @@ function App() {
           <li>
             <Link to='/profile'>PROFILE</Link>
           </li>
-          <li>
-            <Link to='/portfolio'>PORTFOLIO</Link>
-          </li>
         </ul>
       </nav>
       <section>
-          <Redirect exact from='/' to='/home'/>
-        <Route exact path='/home'>
+        <Route exact path='/'>
             <h1>HOME</h1>
         </Route>
         <Route exact path='/profile'>
             <h1>PROFILE</h1>
         </Route>
-        <Route exact path='/portfolio'>
-           <Portfolio/>
+        <Route path='*'>
+           404: Page not found 
         </Route>
       </section>
     </div>
