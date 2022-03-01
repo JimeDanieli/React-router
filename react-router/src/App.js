@@ -1,7 +1,18 @@
-import { Route, Link} from 'react-router-dom'
+import { Route, Link, useHistory} from 'react-router-dom'
 
 
 function App() {
+    const history = useHistory()
+    console.log({history})
+    const forward=()=>{
+        history.goForward()
+    }
+    const back=()=>{
+        history.goBack()
+    }
+    const push=(url)=>{
+        history.push(url)
+    }
   return (
     <div className="App">
       <nav>
@@ -15,6 +26,9 @@ function App() {
         </ul>
       </nav>
       <section>
+          <button onClick={back}>Previous</button>
+          <button onClick={forward}>Next</button>
+          <button onClick={()=>push('/idk')}>Push</button>
         <Route exact path='/'>
             <h1>HOME</h1>
         </Route>
